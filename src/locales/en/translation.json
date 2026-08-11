@@ -1,0 +1,27 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "departments": "Departments",
+        "programs": "Programs",
+        "news": "News",
+        "announcements": "Announcements",
+        "faculty": "Faculty",
+        "services": "Services",
+        "events": "Events",
+        "contact": "Contact"
+    },
+    "common": {
+        "facultyName": "Faculty of Computers Science - BNU",
+        "universityName": "Benha National University",
+        "loading": "Loading...",
+        "noData": "No data available",
+        "error": "An error occurred while loading data",
+        "readMore": "Read More",
+        "search": "Search..."
+    },
+    "footer": {
+        "rights": "All rights reserved © 2026 Faculty of Computers and Information",
+        "quickLinks": "Quick Links"
+    }
+}
