@@ -26,21 +26,35 @@ const NewsPage = () => {
                     </h1>
                     <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200">
                         {isArabic
-                            ? "تابع آخر الأحداث الدراسيّة والأكاديمية والنشاطات التي تقدمها الكلية.":
-                            "Follow the latest academic events, student achievements, and department updates."}
+                            ? "تابع آخر الأحداث الدراسيّة والأكاديمية والنشاطات التي تقدمها الكلية."
+                            : "Follow the latest academic events, student achievements, and department updates."}
                     </p>
                 </div>
             </section>
 
             <section className="grid gap-6 lg:grid-cols-2">
                 {newsData.map(item => (
-                    <article key={item.id} className="overflow-hidden rounded-[28px] border border-slate-200/70 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-                        <div className="p-6">
-                            <div className="mb-3 inline-flex rounded-full bg-[#eef4f9] px-3 py-1 text-xs font-black text-[#10273d]">
+                    <article
+                        key={item.id}
+                        className="group overflow-hidden rounded-[28px] border border-slate-200/70 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
+                    >
+                        <div className="relative h-64 overflow-hidden">
+                            <img
+                                src={item.image}
+                                alt={item.title[isArabic ? "ar" : "en"]}
+                                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#10273d]/75 via-[#10273d]/10 to-transparent" />
+                            <div className="absolute left-4 top-4 inline-flex rounded-full bg-white/90 px-3 py-1 text-[10px] font-black tracking-[0.18em] text-[#10273d] uppercase backdrop-blur-sm">
                                 {item.category}
                             </div>
+                        </div>
+
+                        <div className="p-6">
                             <h2 className="text-2xl font-black text-slate-900">{item.title[isArabic ? "ar" : "en"]}</h2>
-                            <p className="mt-4 text-sm leading-7 text-slate-600">{item.summary[isArabic ? "ar" : "en"]}</p>
+                            <p className="mt-4 text-sm leading-7 text-slate-600">
+                                {item.summary[isArabic ? "ar" : "en"]}
+                            </p>
                         </div>
                         <div className="flex items-center justify-between gap-4 border-t border-slate-200/70 bg-slate-50 px-6 py-4">
                             <span className="text-sm text-slate-500">{formatDate(item.date)}</span>

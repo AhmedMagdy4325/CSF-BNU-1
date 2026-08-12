@@ -1,3 +1,8 @@
+import researchImage from "../assets/ResearcDevelopment.jpg";
+import careerImage from "../assets/careerSupport.jpg";
+import labsImage from "../assets/digitalLaps.png";
+import trainingImage from "../assets/trainingPrograms.jpg";
+
 export const services = [
     {
         id: "training",
@@ -6,6 +11,7 @@ export const services = [
             ar: "ورش عمل ودورات قصيرة في تطوير البرمجيات، تحليل البيانات، والذكاء الاصطناعي.",
             en: "Workshops and short courses in software development, data analysis, and artificial intelligence.",
         },
+        image: trainingImage,
     },
     {
         id: "research",
@@ -14,6 +20,7 @@ export const services = [
             ar: "دعم مشاريع البحث العلمي والتعاون مع الصناعة لبناء حلول تقنية مبتكرة.",
             en: "Supporting scientific research projects and industry collaboration to build innovative technical solutions.",
         },
+        image: researchImage,
     },
     {
         id: "labs",
@@ -22,6 +29,7 @@ export const services = [
             ar: "معامل مجهزة بأحدث الأدوات العلمية لتطوير التطبيقات والاختبارات العملية.",
             en: "Labs equipped with the latest scientific tools for application development and practical testing.",
         },
+        image: labsImage,
     },
     {
         id: "career",
@@ -30,6 +38,7 @@ export const services = [
             ar: "خدمات الإرشاد المهني، إعداد السيرة الذاتية، وتوجيه الطلاب نحو فرص التوظيف.",
             en: "Career guidance, resume preparation, and student support toward employment opportunities.",
         },
+        image: careerImage,
     },
 ];
 

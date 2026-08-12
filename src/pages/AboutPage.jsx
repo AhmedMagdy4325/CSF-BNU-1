@@ -72,7 +72,7 @@ const AboutPage = () => {
             <section className="rounded-[32px] bg-[#10273d] px-6 py-12 text-white shadow-[0_30px_60px_rgba(16,39,61,0.18)] sm:px-8 lg:px-10">
                 <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
                     <div className={isArabic ? "space-y-6 text-right" : "space-y-6 text-left"}>
-                        <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-black tracking-[0.12em] text-[#14b6d8] uppercase">
+                        <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-black tracking-[0.12em] text-[#14b6d8] ">
                             {isArabic ? "عن الكلية" : "About the Faculty"}
                         </span>
                         <h1 className="text-4xl font-black leading-tight sm:text-5xl">
@@ -100,7 +100,7 @@ const AboutPage = () => {
                         <div className="space-y-5">
                             <div className="flex items-center justify-between border-b border-white/10 pb-4">
                                 <div>
-                                    <p className="text-xs font-black tracking-[0.14em] text-[#14b6d8] uppercase">
+                                    <p className="text-xm font-black tracking-[0.14em] text-[#14b6d8]">
                                         {isArabic ? "رسالتنا" : "Our Mission"}
                                     </p>
                                     <h2 className="mt-2 text-2xl font-black text-white">
@@ -144,7 +144,7 @@ const AboutPage = () => {
 
             <section className="space-y-8">
                 <div className="text-center">
-                    <span className="inline-flex items-center rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] text-[#10273d] uppercase">
+                    <span className="inline-flex items-center rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] text-[#10273d]">
                         {isArabic ? "محاورنا" : "Our Focus"}
                     </span>
                     <h2 className="mt-3 text-3xl font-black text-slate-900">
@@ -178,7 +178,7 @@ const AboutPage = () => {
             <section className="space-y-8">
                 <div className="flex items-end justify-between border-b border-slate-200 pb-4">
                     <div>
-                        <span className="inline-flex items-center rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] text-[#10273d] uppercase">
+                        <span className="inline-flex items-center rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] text-[#10273d]">
                             {isArabic ? "رحلتنا" : "Our Journey"}
                         </span>
                         <h2 className="mt-3 text-3xl font-black text-slate-900">

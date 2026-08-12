@@ -25,8 +25,8 @@ const ServicesPage = () => {
                     </h1>
                     <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200">
                         {isArabic
-                            ? "توفر الكلية خدمات تدريبية، بحثية، مختبرات متقدمة، ودعم مهني متكامل.":
-                            "The faculty provides training, research support, advanced labs, and comprehensive career services."}
+                            ? "توفر الكلية خدمات تدريبية، بحثية، مختبرات متقدمة، ودعم مهني متكامل."
+                            : "The faculty provides training, research support, advanced labs, and comprehensive career services."}
                     </p>
                 </div>
             </section>
@@ -35,14 +35,35 @@ const ServicesPage = () => {
                 {services.map(service => {
                     const Icon = iconMap[service.id] || BookOpen;
                     return (
-                        <article key={service.id} className="rounded-[28px] border border-slate-200/70 bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-                            <div className="mb-5 flex items-center gap-4">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#eef4f9] text-[#10273d]">
-                                    <Icon className="h-6 w-6" />
+                        <article
+                            key={service.id}
+                            className="group overflow-hidden rounded-[28px] border border-slate-200/70 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
+                        >
+                            <div className="relative h-52 overflow-hidden">
+                                <img
+                                    src={service.image}
+                                    alt={service.title[isArabic ? "ar" : "en"]}
+                                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#10273d]/80 via-[#10273d]/20 to-transparent" />
+                                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/90 text-[#10273d] shadow-lg backdrop-blur-sm">
+                                        <Icon className="h-6 w-6" />
+                                    </div>
+                                    <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-black tracking-[0.18em] text-white uppercase backdrop-blur-sm">
+                                        {isArabic ? "خدمة" : "Service"}
+                                    </span>
                                 </div>
-                                <h2 className="text-2xl font-black text-slate-900">{service.title[isArabic ? "ar" : "en"]}</h2>
                             </div>
-                            <p className="text-sm leading-7 text-slate-600">{service.description[isArabic ? "ar" : "en"]}</p>
+
+                            <div className="p-6">
+                                <h2 className="text-2xl font-black text-slate-900">
+                                    {service.title[isArabic ? "ar" : "en"]}
+                                </h2>
+                                <p className="mt-4 text-sm leading-7 text-slate-600">
+                                    {service.description[isArabic ? "ar" : "en"]}
+                                </p>
+                            </div>
                         </article>
                     );
                 })}
@@ -55,7 +76,9 @@ const ServicesPage = () => {
                             {isArabic ? "هل تحتاج إلى مساعدة" : "Need support"}
                         </p>
                         <h2 className="mt-2 text-3xl font-black">
-                            {isArabic ? "نسعد بالإجابة على استفساراتك المهنية." : "We’re happy to answer your professional inquiries."}
+                            {isArabic
+                                ? "نسعد بالإجابة على استفساراتك المهنية."
+                                : "We’re happy to answer your professional inquiries."}
                         </h2>
                     </div>
 

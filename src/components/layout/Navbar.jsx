@@ -39,7 +39,7 @@ const Navbar = () => {
                                     : "border-l border-slate-200 pl-3 text-left"
                             }
                         >
-                            <span className="block text-[10px] font-extrabold tracking-[0.18em] text-[#0a9fc1] uppercase">
+                            <span className="block text-xs font-extrabold tracking-[0.18em] text-[#0a9fc1]">
                                 {isArabic ? "جامعة بنها الأهلية" : "Benha National University"}
                             </span>
                             <span className="mt-1 block text-sm font-black text-slate-900 sm:text-base">

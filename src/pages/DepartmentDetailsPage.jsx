@@ -50,9 +50,9 @@ const DepartmentDetailsPage = () => {
                                 </div>
                                 <div className="text-xs font-bold text-slate-300">{isArabic ? "تفاصيل البرنامج" : "Program details"}</div>
                                 <div className="mt-2 text-sm font-black text-white">{department.level[isArabic ? "ar" : "en"]}</div>
-                                <div className="mt-3 text-xs uppercase tracking-[0.16em] text-slate-400">{isArabic ? "الساعات" : "Hours"}</div>
+                                <div className="mt-3 text-xs tracking-[0.16em] text-slate-400">{isArabic ? "الساعات" : "Hours"}</div>
                                 <div className="text-sm font-bold text-white">{department.hours[isArabic ? "ar" : "en"]}</div>
-                                <div className="mt-3 text-xs uppercase tracking-[0.16em] text-slate-400">{isArabic ? "التكلفة" : "Cost"}</div>
+                                <div className="mt-3 text-xs tracking-[0.16em] text-slate-400">{isArabic ? "التكلفة" : "Cost"}</div>
                                 <div className="text-sm font-bold text-white">{department.fees[isArabic ? "ar" : "en"]}</div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@ const DepartmentDetailsPage = () => {
             <section className="rounded-[32px] bg-gradient-to-r from-[#10273d] to-[#14b6d8] p-6 text-white shadow-[0_30px_60px_rgba(16,39,61,0.14)] sm:p-8">
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                     <div className={isArabic ? "text-right" : "text-left"}>
-                        <p className="text-[11px] font-black tracking-[0.12em] text-cyan-100 uppercase">{isArabic ? "ابدأ الآن" : "Start now"}</p>
+                        <p className="text-[11px] font-black tracking-[0.12em] text-cyan-100 ">{isArabic ? "ابدأ الآن" : "Start now"}</p>
                         <h2 className="mt-2 text-3xl font-black">
                             {isArabic ? "تعرّف على الفرص الأكاديمية المتاحة في هذا القسم." : "Discover the academic opportunities offered by this program."}
                         </h2>

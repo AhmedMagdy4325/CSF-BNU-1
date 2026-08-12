@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import bnuImage from "../assets/bnu.jpg";
 
 const HomePage = () => {
     const { i18n } = useTranslation();
@@ -207,7 +208,7 @@ const HomePage = () => {
               viewAll: "View departments",
               details: "Details",
               readMore: "Read more",
-              joinTitle: "Join the innovation community",
+              joinTitle: "Join The Innovation Community",
               joinText: "Start your path in technology and artificial intelligence",
               contact: "Contact us",
               programsBtn: "Programs",
@@ -215,21 +216,27 @@ const HomePage = () => {
 
     return (
         <div dir={isArabic ? "rtl" : "ltr"} className="space-y-16 pb-16 md:space-y-20">
-            <section className="relative overflow-hidden bg-[#10273d] text-white">
-                <div className="absolute inset-0 bg-linear-to-br from-[#10273d] via-[#10273d]/90 to-[#0d1f33] opacity-95" />
-
+           <section
+    className="relative overflow-hidden bg-[#10273d] text-white"
+    style={{
+        backgroundImage: `url(${bnuImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+    }}
+>
+               <div className="absolute inset-0 bg-[#10273d]/20" />
                 <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
                     <div className="grid items-center gap-12 lg:grid-cols-[1.25fr_0.85fr]">
                         <div className={isArabic ? "space-y-8 text-right" : "space-y-8 text-left"}>
-                            <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-black tracking-[0.18em] text-[#14b6d8] uppercase">
+                            <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-black tracking-[0.18em] text-[#0a9fc1]">
                                 <Sparkles className="h-4 w-4 text-[#d3a85f]" />
                                 <span>{hero.badge}</span>
                             </div>
 
                             <div className="space-y-6">
-                                <h1 className="text-4xl font-black leading-[1.03] text-white sm:text-5xl lg:text-6xl">
+                                <h1 className="text-3xl font-black leading-[1.05] text-white sm:text-4xl lg:text-5xl">
                                     {hero.title}
-                                    <span className="mt-3 block text-transparent bg-clip-text bg-linear-to-r from-[#14b6d8] via-cyan-200 to-sky-100 text-5xl sm:text-6xl">
+                                    <span className="mt-3 block text-transparent bg-clip-text bg-linear-to-r from-[#14b6d8] via-cyan-200 to-sky-100 text-5xl sm:text-5xl">
                                         {hero.highlight}
                                     </span>
                                 </h1>
@@ -277,12 +284,12 @@ const HomePage = () => {
                             <div className="overflow-hidden rounded-4xl border border-white/10 bg-white/5 p-6 shadow-[0_30px_60px_rgba(15,23,42,0.25)] backdrop-blur-xl sm:p-8">
                                 <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
                                     <div>
-                                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-300">
+                                        <p className="text-sm font-bold tracking-[0.2em] text-[#f0c674]">
                                             {hero.panelTitle}
                                         </p>
                                         <h3 className="mt-3 text-2xl font-black text-white">CS BNU</h3>
                                     </div>
-                                    <span className="rounded-full bg-[#d3a85f]/15 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#d3a85f]">
+                                    <span className="rounded-full bg-[#d3a85f]/15 px-3 py-1 text-[11px] font-black tracking-[0.18em] text-[#d3a85f]">
                                         {isArabic ? "متاح" : "Available"}
                                     </span>
                                 </div>
@@ -304,7 +311,7 @@ const HomePage = () => {
                                 </div>
 
                                 <div className="mt-8 rounded-[28px] border border-[#d3a85f]/20 bg-[#10273d]/50 p-5">
-                                    <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#d3a85f]">
+                                    <p className="text-[11px] font-black tracking-[0.14em] text-[#d3a85f]">
                                         {hero.visionTitle}
                                     </p>
                                     <p className="mt-3 text-sm leading-7 text-slate-200">{hero.visionText}</p>
@@ -339,7 +346,7 @@ const HomePage = () => {
                 <section className="space-y-8">
                     <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                         <div>
-                            <span className="inline-flex items-center gap-2 rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] uppercase text-[#10273d]">
+                            <span className="inline-flex items-center gap-2 rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] text-[#10273d]">
                                 {hero.sectionTag1}
                             </span>
                             <h2 className="mt-3 text-2xl font-black text-slate-900 sm:text-3xl">{hero.whyTitle}</h2>
@@ -375,7 +382,7 @@ const HomePage = () => {
                 <section className="space-y-8">
                     <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                         <div>
-                            <span className="inline-flex items-center gap-2 rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] uppercase text-[#10273d]">
+                            <span className="inline-flex items-center gap-2 rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] text-[#10273d]">
                                 {hero.sectionTag2}
                             </span>
                             <h2 className="mt-3 text-2xl font-black text-slate-900 sm:text-3xl">{hero.programTitle}</h2>
@@ -415,7 +422,7 @@ const HomePage = () => {
                 <section className="space-y-8">
                     <div className="flex items-center justify-between border-b border-slate-200 pb-4">
                         <div>
-                            <span className="inline-flex items-center gap-2 rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] uppercase text-[#10273d]">
+                            <span className="inline-flex items-center gap-2 rounded-full border border-[#14b6d8]/25 bg-[#14b6d8]/10 px-3 py-1.5 text-[11px] font-black tracking-[0.08em] text-[#10273d]">
                                 {hero.sectionTag3}
                             </span>
                             <h2 className="mt-3 text-2xl font-black text-slate-900 sm:text-3xl">{hero.newsTitle}</h2>
@@ -466,7 +473,7 @@ const HomePage = () => {
                 <section className="rounded-4xl bg-linear-to-r from-[#10273d] via-[#10273d] to-[#14b6d8] p-8 text-white shadow-[0_30px_60px_rgba(16,39,61,0.22)]">
                     <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
                         <div className={isArabic ? "space-y-4 text-right" : "space-y-4 text-left"}>
-                            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[11px] font-black tracking-[0.12em] uppercase text-cyan-100">
+                            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[11px] font-black tracking-[0.12em] text-cyan-100">
                                 <Star className="h-3.5 w-3.5 text-[#d3a85f]" />
                                 {hero.joinTitle}
                             </span>
