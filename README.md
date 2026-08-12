@@ -1,16 +1,112 @@
-# React + Vite
+# Faculty Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Name
 
-Currently, two official plugins are available:
+Benha National University Faculty of Computer Science Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Team Members
 
-## React Compiler
+- Ahmed Magdy Reda — 23030017
+- Ahmed Mohamed Salem — 24030023
+- Ahmed Mansour — 23030020
+- Shahd Mohamed — 24030135
+- Saba Wael El Sayed — 24030136
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Idea
 
-## Expanding the ESLint configuration
+This project is a modern faculty website for Benha National University, designed to present information about the Faculty of Computer Science in a professional and user-friendly manner. The website includes sections such as:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Home page
+- About the faculty
+- Academic departments
+- Faculty members
+- Services
+- News and announcements
+- Contact page
+
+The site supports bilingual content in Arabic and English and uses a responsive UI for desktop and mobile screens.
+
+## Features
+
+- Responsive layout
+- Arabic and English language toggle
+- Modern design using React + Vite + Tailwind CSS
+- Dynamic pages for departments, faculty, services, and news
+- Clean component structure and reusable UI blocks
+
+## Required Tools
+
+Before running the project, make sure you have installed:
+
+- Node.js 18 or newer
+- npm 9 or newer
+
+## Installation
+
+1. Clone the repository.
+2. Open the project folder.
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+## Running the Project
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+Then open the local URL shown in the terminal, usually:
+
+```bash
+http://localhost:5173/
+```
+
+To build the project for production:
+
+```bash
+npm run build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+## Main Libraries / Dependencies
+
+This project uses the following libraries:
+
+- React
+- React DOM
+- React Router DOM
+- i18next
+- i18next-browser-languagedetector
+- React i18next
+- lucide-react
+- Vite
+- Tailwind CSS
+- ESLint
+
+## Project Structure
+
+```bash
+src/
+  components/
+  data/
+  hooks/
+  i18n/
+  layouts/
+  locales/
+  pages/
+  routes/
+  utils/
+```
+
+## Notes
+
+This project is a university website template built for academic presentation and campus information. It is suitable for showcasing the faculty, events, academic programs, and student services in a polished digital format.
