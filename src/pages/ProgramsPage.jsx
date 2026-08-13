@@ -22,13 +22,13 @@ const ProgramsPage = () => {
                     </span>
                     <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl">
                         {isArabic
-                            ? "برامجنا الأكاديمية 136 ساعة بمصاريف 80,000 جنيه لكل برنامج."
-                            : "Our academic programs are 136 hours with a fee of 80,000 EGP per program."}
+                            ? "برامج أكاديمية موجهة نحو سوق العمل والابتكار الرقمي."
+                            : "Academic programs designed for the digital job market and innovation."}
                     </h1>
                     <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200">
                         {isArabic
-                            ? "اختر البرنامج الذي يتناسب مع طموحك المهني واستفد من تدريب عملي ومقررات حديثة تدعم التحول الرقمي."
-                            : "Choose the program that matches your career ambition and benefit from hands-on training with modern digital curriculum."}
+                            ? "تقدم الكلية مسارات تعليمية متخصصة تركز على المهارات العملية، المشاريع التطبيقية، والتأهيل المهني في مجالات التقنية الحديثة."
+                            : "The faculty offers specialized learning pathways that focus on practical skills, applied projects, and professional readiness in modern technology fields."}
                     </p>
                 </div>
             </section>

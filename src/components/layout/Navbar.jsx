@@ -1,4 +1,4 @@
-import { Menu, Phone, X } from "lucide-react";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
@@ -8,15 +8,22 @@ import LanguageSwitcher from "../common/LanguageSwitcher";
 const Navbar = () => {
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const isArabic = i18n.language === "ar";
 
-    const links = [
+    const primaryLinks = [
         { path: "/", label: { ar: "الرئيسية", en: "Home" } },
         { path: "/about", label: { ar: "عن الكلية", en: "About" } },
         { path: "/departments", label: { ar: "الأقسام", en: "Departments" } },
+        { path: "/programs", label: { ar: "البرامج", en: "Programs" } },
         { path: "/faculty", label: { ar: "هيئة التدريس", en: "Faculty" } },
+    ];
+
+    const dropdownLinks = [
         { path: "/services", label: { ar: "الخدمات", en: "Services" } },
         { path: "/news", label: { ar: "الأخبار", en: "News" } },
+        { path: "/announcements", label: { ar: "الإعلانات", en: "Announcements" } },
+        { path: "/events", label: { ar: "الفعاليات", en: "Events" } },
         { path: "/contact", label: { ar: "تواصل معنا", en: "Contact" } },
     ];
 
@@ -46,7 +53,7 @@ const Navbar = () => {
                     </Link>
 
                     <nav className="hidden items-center gap-2 lg:flex">
-                        {links.map(link => (
+                        {primaryLinks.map(link => (
                             <NavLink
                                 key={link.path}
                                 to={link.path}
@@ -61,6 +68,41 @@ const Navbar = () => {
                                 {link.label[isArabic ? "ar" : "en"]}
                             </NavLink>
                         ))}
+
+                        <div className="relative">
+                            <button
+                                type="button"
+                                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                className="flex items-center gap-2 rounded-xl px-3.5 py-2 text-sm font-bold text-slate-600 transition hover:bg-slate-100 hover:text-[#10273d]"
+                            >
+                                <span>{isArabic ? "المزيد" : "More"}</span>
+                                <ChevronDown className={`h-4 w-4 transition ${isDropdownOpen ? "rotate-180" : ""}`} />
+                            </button>
+
+                            {isDropdownOpen && (
+                                <div
+                                    className="absolute right-0 top-full z-20 mt-3 w-52 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_18px_40px_rgba(15,23,42,0.12)]"
+                                    onMouseLeave={() => setIsDropdownOpen(false)}
+                                >
+                                    {dropdownLinks.map(link => (
+                                        <NavLink
+                                            key={link.path}
+                                            to={link.path}
+                                            onClick={() => setIsDropdownOpen(false)}
+                                            className={({ isActive }) =>
+                                                `block rounded-xl px-3 py-2 text-sm font-bold transition ${
+                                                    isActive
+                                                        ? "bg-[#10273d] text-white"
+                                                        : "text-slate-600 hover:bg-slate-100 hover:text-[#10273d]"
+                                                }`
+                                            }
+                                        >
+                                            {link.label[isArabic ? "ar" : "en"]}
+                                        </NavLink>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     </nav>
 
                     <div className="flex items-center gap-2">
@@ -87,8 +129,8 @@ const Navbar = () => {
 
             {isOpen && (
                 <div className="border-t border-slate-200 bg-white px-4 py-3 shadow-lg lg:hidden">
-                    <div className="space-y-1">
-                        {links.map(link => (
+                    <div className="space-y-2">
+                        {primaryLinks.map(link => (
                             <NavLink
                                 key={link.path}
                                 to={link.path}
@@ -102,6 +144,28 @@ const Navbar = () => {
                                 {link.label[isArabic ? "ar" : "en"]}
                             </NavLink>
                         ))}
+
+                        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-2">
+                            <div className="mb-2 px-2 text-[10px] font-black tracking-[0.18em] text-slate-500 uppercase">
+                                {isArabic ? "المزيد" : "More"}
+                            </div>
+                            <div className="space-y-1">
+                                {dropdownLinks.map(link => (
+                                    <NavLink
+                                        key={link.path}
+                                        to={link.path}
+                                        onClick={() => setIsOpen(false)}
+                                        className={({ isActive }) =>
+                                            `block rounded-lg px-3 py-2 text-sm font-bold ${
+                                                isActive ? "bg-[#10273d] text-white" : "text-slate-600 hover:bg-white"
+                                            }`
+                                        }
+                                    >
+                                        {link.label[isArabic ? "ar" : "en"]}
+                                    </NavLink>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}

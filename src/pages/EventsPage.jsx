@@ -25,29 +25,47 @@ const EventsPage = () => {
                     </h1>
                     <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200">
                         {isArabic
-                            ? "تعرّف على ورش العمل، المسابقات، والمعارض التي تنظمها الكلية خلال الفترة المقبلة.":
-                            "Discover workshops, competitions, and expos hosted by the faculty in the near future."}
+                            ? "تعرّف على ورش العمل، المسابقات، والمعارض التي تنظمها الكلية خلال الفترة المقبلة."
+                            : "Discover workshops, competitions, and expos hosted by the faculty in the near future."}
                     </p>
                 </div>
             </section>
 
             <section className="grid gap-6 lg:grid-cols-3">
                 {events.map(event => (
-                    <article key={event.id} className="rounded-[28px] border border-slate-200/70 bg-white p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)]">
-                        <div className="mb-4 flex items-center justify-between gap-3">
-                            <span className="rounded-full bg-[#eef4f9] px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-[#10273d]">
+                    <article
+                        key={event.id}
+                        className="group overflow-hidden rounded-[28px] border border-slate-200/70 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
+                    >
+                        <div className="relative h-52 overflow-hidden">
+                            <img
+                                src={event.image}
+                                alt={event.title[isArabic ? "ar" : "en"]}
+                                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#10273d]/80 via-[#10273d]/20 to-transparent" />
+                            <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-black tracking-[0.18em] text-[#10273d] uppercase backdrop-blur-sm">
                                 {event.type[isArabic ? "ar" : "en"]}
-                            </span>
-                            <div className="inline-flex items-center gap-2 rounded-2xl bg-[#f8fafc] px-3 py-1 text-xs font-bold text-slate-600">
-                                <CalendarDays className="h-4 w-4" />
-                                {formatDate(event.date)}
                             </div>
                         </div>
-                        <h2 className="text-2xl font-black text-slate-900">{event.title[isArabic ? "ar" : "en"]}</h2>
-                        <p className="mt-4 text-sm leading-7 text-slate-600">{event.summary[isArabic ? "ar" : "en"]}</p>
-                        <div className="mt-6 flex items-center gap-2 text-sm font-bold text-slate-700">
-                            <MapPin className="h-4 w-4" />
-                            <span>{event.location[isArabic ? "ar" : "en"]}</span>
+
+                        <div className="p-6">
+                            <div className="mb-4 flex items-center justify-between gap-3">
+                                <div className="inline-flex items-center gap-2 rounded-2xl bg-[#f8fafc] px-3 py-1 text-xs font-bold text-slate-600">
+                                    <CalendarDays className="h-4 w-4" />
+                                    {formatDate(event.date)}
+                                </div>
+                            </div>
+                            <h2 className="text-2xl font-black text-slate-900">
+                                {event.title[isArabic ? "ar" : "en"]}
+                            </h2>
+                            <p className="mt-4 text-sm leading-7 text-slate-600">
+                                {event.summary[isArabic ? "ar" : "en"]}
+                            </p>
+                            <div className="mt-6 flex items-center gap-2 text-sm font-bold text-slate-700">
+                                <MapPin className="h-4 w-4" />
+                                <span>{event.location[isArabic ? "ar" : "en"]}</span>
+                            </div>
                         </div>
                     </article>
                 ))}

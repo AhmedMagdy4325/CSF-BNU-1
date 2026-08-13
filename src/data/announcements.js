@@ -1,3 +1,6 @@
+import examImage from "../assets/exam.jpg";
+import trainingImage from "../assets/training.jpg";
+
 export const announcementsData = [
     {
         id: "a1",
@@ -11,6 +14,7 @@ export const announcementsData = [
             ar: "يرجى من جميع الطلاب مراجعة الجدول الدراسي والتأكد من أرقام الجلوس وأماكن اللجان عبر البوابة الإلكترونية.",
             en: "All students are requested to review the exam schedule and seat numbers via the student portal.",
         },
+        image: examImage,
     },
     {
         id: "a2",
@@ -24,5 +28,6 @@ export const announcementsData = [
             ar: "تعلن وحدة التدريب بالكلية عن فتح باب التسجيل لدورات الحوسبة السحابية وتطوير الويب لطلاب السنتين الثالثة والرابعة.",
             en: "The training unit announces open registration for Cloud Computing and Web Dev courses.",
         },
+        image: trainingImage,
     },
 ];

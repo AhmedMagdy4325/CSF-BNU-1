@@ -1,3 +1,7 @@
+import aiBootcampImage from "../assets/ai-bootcamp.jpg";
+import vrHackathonImage from "../assets/extended-reality.jpg";
+import graduationExpoImage from "../assets/graduation-p-expo.jpg";
+
 export const events = [
     {
         id: "ai-bootcamp",
@@ -16,6 +20,7 @@ export const events = [
             ar: "يتضمن المعسكر جلسات عملية، تحديات برمجية، وفرص عرض المشاريع أمام خبراء الصناعة.",
             en: "The bootcamp includes hands-on sessions, coding challenges, and project showcases before industry experts.",
         },
+        image: aiBootcampImage,
     },
     {
         id: "graduation-expo",
@@ -34,6 +39,7 @@ export const events = [
             ar: "يضم المعرض نماذج عمل ونماذج تفاعلية من مشاريع طلابية في الذكاء الاصطناعي، الواقع الافتراضي، وعلوم البيانات.",
             en: "The expo features working prototypes and interactive demos from student projects in AI, VR, and data science.",
         },
+        image: graduationExpoImage,
     },
     {
         id: "vr-hackathon",
@@ -52,6 +58,7 @@ export const events = [
             ar: "يتيح الحدث فرصًا للعمل الجماعي السريع وتجربة الأدوات الحديثة لتطوير تجارب رقمية تفاعلية.",
             en: "The event offers rapid team collaboration and modern tools for building interactive digital experiences.",
         },
+        image: vrHackathonImage,
     },
 ];
 
