@@ -34,6 +34,43 @@ The site supports bilingual content in Arabic and English and uses a responsive 
 - Dynamic pages for departments, faculty, services, and news
 - Clean component structure and reusable UI blocks
 
+## Screenshots
+
+### Home page
+
+![Home Hero](screens/home/heroSec)
+
+### Academic programs
+
+![Academic Programs](screens/home/AcademicPrograms)
+
+### Latest news
+
+![Latest News](screens/home/LatestNews)
+
+### About page
+
+![About Hero](screens/about/hero)
+
+### Departments page
+
+![Departments Hero](screens/departs/hero)
+
+### Services page
+
+![Services Hero](screens/services/hero)
+
+### Contact page
+
+![Contact](screens/contact/contact)
+
+## Demo Video
+
+<video controls width="100%">
+  <source src="video/recording_2026-08-12_22.39.49.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Required Tools
 
 Before running the project, make sure you have installed:
