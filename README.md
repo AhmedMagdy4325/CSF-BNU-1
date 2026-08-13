@@ -67,7 +67,7 @@ The site supports bilingual content in Arabic and English and uses a responsive 
 ## Demo Video
 
 <video controls width="100%">
-  <source src="video/recording_2026-08-12_22.39.49.mp4" type="video/mp4">
+  <source src="../video/recording_2026-08-12_22.39.49.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
